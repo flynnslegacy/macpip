@@ -1,0 +1,18 @@
+/* Status bar menu */
+"Relancer" = "Reopen";
+"À propos de MacPiP" = "About MacPiP";
+"Quitter" = "Quit";
+
+/* Right-click menu on the PiP window */
+"Fermer la fenêtre" = "Close Window";
+"Autorisation d'enregistrement d'écran requise — cliquer pour ouvrir Réglages" = "Screen Recording permission required — click to open Settings";
+"Recherche des fenêtres en cours…" = "Searching for windows…";
+"Application" = "Application";
+"Fenêtre sans titre" = "Untitled Window";
+"Arrêter la capture" = "Stop Capture";
+
+/* PiP window states */
+"Connexion…" = "Connecting…";
+"Clic droit pour choisir une fenêtre à capturer" = "Right-click to choose a window to capture";
+"Aucune de ces fenêtres n'affiche de contenu pour le moment." = "None of these windows currently show any content.";
+"Capture arrêtée : %@" = "Capture stopped: %@";
