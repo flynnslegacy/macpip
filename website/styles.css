@@ -91,7 +91,7 @@ html[lang="en"] span[data-lang="en"] { display: inline; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 
 #top { scroll-margin-top: 84px; }
-#features, #faq, #contact { scroll-margin-top: 84px; }
+#features, #faq, #contact, #privacy { scroll-margin-top: 84px; }
 
 .lang-switch { display: flex; border: 1px solid var(--color-neutral-800); border-radius: 999px; padding: 2px; }
 .lang-switch button {
@@ -254,6 +254,17 @@ textarea.input { resize: vertical; font-family: var(--font-body); }
   .contact-form { grid-template-columns: 1fr; }
 }
 
+/* privacy */
+.privacy-section { padding-top: 96px; }
+.privacy-box {
+  border-top: 1px solid var(--color-neutral-900);
+  padding-top: 40px; max-width: 68ch;
+}
+.privacy-box h2 { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 4px; }
+.privacy-box p { font: 400 14.5px/1.65 var(--font-body); color: var(--color-neutral-500); margin: 12px 0 0; }
+.privacy-box a { color: var(--color-neutral-400); text-decoration: underline; text-underline-offset: 2px; }
+.privacy-box a:hover { color: var(--color-accent-300); }
+
 /* footer */
 .site-footer { margin-top: 64px; }
 .footer-top {
@@ -261,6 +272,9 @@ textarea.input { resize: vertical; font-family: var(--font-body); }
   align-items: center; justify-content: space-between;
 }
 .footer-top .credit { font: 400 13px/1.5 var(--font-body); color: var(--color-neutral-600); }
+.footer-links { display: flex; align-items: center; gap: 16px; }
+.footer-links a { font: 400 13px/1.5 var(--font-body); color: var(--color-neutral-600); text-decoration: underline; text-underline-offset: 2px; }
+.footer-links a:hover { color: var(--color-neutral-300); }
 .footer-top .tagline { font: 400 13px/1.5 var(--font-body); color: var(--color-neutral-700); }
 .footer-bottom {
   border-top: 1px solid var(--color-neutral-900);
