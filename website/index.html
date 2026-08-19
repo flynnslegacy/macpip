@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacPiP — N'importe quelle fenêtre, toujours au premier plan</title>
+<meta name="description" content="MacPiP transforme n'importe quelle fenêtre de votre Mac en un mini-lecteur flottant qui reste toujours au premier plan.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header-inner">
+    <a class="brand" href="#top" aria-label="MacPiP">
+      <img src="assets/icon.png" alt="">
+      <span>MacPiP</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav">
+      <a href="#features"><span data-lang="fr">Fonctionnalités</span><span data-lang="en">Features</span></a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button type="button" id="lang-fr" data-set-lang="fr">FR</button>
+        <button type="button" id="lang-en" data-set-lang="en">EN</button>
+      </div>
+      <a class="btn btn-primary" href="https://macpip.exemples.xyz">
+        <span data-lang="fr">Télécharger</span>
+        <span data-lang="en">Download</span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="wrap hero" id="top">
+  <div class="eyebrow">
+    <span class="dot"></span>
+    <span>macOS 13+ · Menu bar · Français / English</span>
+  </div>
+
+  <div data-lang="fr">
+    <h1>N'importe quelle fenêtre.<br><span class="accent">Toujours au premier plan.</span></h1>
+    <p class="lead">MacPiP transforme n'importe quelle fenêtre de votre Mac en un mini-lecteur flottant qui reste toujours au premier plan, pendant que vous continuez à travailler ailleurs.</p>
+    <p class="sub">Une vidéo YouTube, un appel Zoom, un match en direct sur NetFlix, une vidéo de formation : clic droit sur la fenêtre MacPiP, choisissez l'application à afficher, et c'est parti. La fenêtre se place où vous le souhaitez sur l'écran et se redimensionne selon votre envie.</p>
+  </div>
+  <div data-lang="en">
+    <h1>Any window.<br><span class="accent">Always on top.</span></h1>
+    <p class="lead">MacPiP turns any window on your Mac into a floating mini player that stays above everything else, while you keep working somewhere else.</p>
+    <p class="sub">A YouTube video, a Zoom call, a live match, a training clip: right-click the MacPiP window, pick the app you want to watch, and that's it. Place the window anywhere on your screen and resize it however you like.</p>
+  </div>
+
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="https://macpip.exemples.xyz">
+      <span data-lang="fr">Télécharger pour macOS</span>
+      <span data-lang="en">Download for macOS</span>
+    </a>
+    <span class="fineprint">
+      <span data-lang="fr">Gratuit · 2 Mo · Universel Apple Silicon &amp; Intel</span>
+      <span data-lang="en">Free · 2 MB · Universal, Apple Silicon &amp; Intel</span>
+    </span>
+  </div>
+
+  <div class="hero-shot">
+    <img src="assets/shot-toujours-visible.webp" alt="MacPiP au-dessus d'une feuille de calcul">
+  </div>
+</section>
+
+<section class="wrap stats-section">
+  <div class="hr"></div>
+  <div class="stats-grid">
+    <div>
+      <div class="stat-value">30 fps</div>
+      <div class="stat-label">
+        <span data-lang="fr">Capture fluide via ScreenCaptureKit</span>
+        <span data-lang="en">Smooth capture via ScreenCaptureKit</span>
+      </div>
+    </div>
+    <div>
+      <div class="stat-value">0</div>
+      <div class="stat-label">
+        <span data-lang="fr">Icône dans le Dock</span>
+        <span data-lang="en">Dock icons</span>
+      </div>
+    </div>
+    <div>
+      <div class="stat-value"><span data-lang="fr">1 clic</span><span data-lang="en">1 click</span></div>
+      <div class="stat-label">
+        <span data-lang="fr">Clic droit, choisissez la fenêtre</span>
+        <span data-lang="en">Right-click, pick a window</span>
+      </div>
+    </div>
+    <div>
+      <div class="stat-value">Sandbox</div>
+      <div class="stat-label">
+        <span data-lang="fr">App sandboxée, rien ne sort du Mac</span>
+        <span data-lang="en">Sandboxed, nothing leaves your Mac</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap features-section" id="features">
+  <div class="kicker">
+    <span data-lang="fr">Fonctionnalités</span>
+    <span data-lang="en">Features</span>
+  </div>
+  <h2>
+    <span data-lang="fr">Quatre choses qu'il fait mieux.</span>
+    <span data-lang="en">Four things it does better.</span>
+  </h2>
+
+  <div class="feature-row">
+    <div class="feature-copy">
+      <span class="feature-mark"></span>
+      <div data-lang="fr">
+        <h3>Toujours au premier plan</h3>
+        <p>La fenêtre reste visible par-dessus vos autres applications.</p>
+      </div>
+      <div data-lang="en">
+        <h3>Always on top</h3>
+        <p>The window stays visible above your other applications.</p>
+      </div>
+    </div>
+    <div class="feature-shot">
+      <img src="assets/shot-au-dessus.webp" alt="" loading="lazy">
+    </div>
+  </div>
+
+  <div class="feature-row reverse">
+    <div class="feature-shot">
+      <img src="assets/shot-redimensionnable.webp" alt="" loading="lazy">
+    </div>
+    <div class="feature-copy">
+      <span class="feature-mark"></span>
+      <div data-lang="fr">
+        <h3>Fonctionne même en plein écran</h3>
+        <p>MacPiP retrouve les fenêtres actives dans un autre Espace en plein écran (par exemple une app de streaming), là où d'autres outils échouent.</p>
+      </div>
+      <div data-lang="en">
+        <h3>Works even in full screen</h3>
+        <p>MacPiP finds windows running in another full-screen Space — a streaming app, for instance — where other tools come up empty.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-cards">
+    <div class="feature-card">
+      <span class="feature-mark"></span>
+      <div data-lang="fr">
+        <h3>Résident dans la barre de menu</h3>
+        <p>Aucune icône dans le Dock, aucune fenêtre superflue.</p>
+      </div>
+      <div data-lang="en">
+        <h3>Lives in the menu bar</h3>
+        <p>No Dock icon, no windows you didn't ask for.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-mark"></span>
+      <div data-lang="fr">
+        <h3>Léger et rapide</h3>
+        <p>Une seule fenêtre, une seule capture à la fois. Toute la puissance reste disponible pour votre travail.</p>
+      </div>
+      <div data-lang="en">
+        <h3>Light and fast</h3>
+        <p>One window, one capture at a time. The rest of the machine stays yours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-shot">
+    <img src="assets/shot-leger.webp" alt="" loading="lazy">
+  </div>
+</section>
+
+<section class="wrap faq-section" id="faq">
+  <div class="faq-grid">
+    <div>
+      <div class="kicker">FAQ</div>
+      <h2>
+        <span data-lang="fr">Questions fréquentes</span>
+        <span data-lang="en">Common questions</span>
+      </h2>
+    </div>
+
+    <div class="faq-list" data-lang="fr">
+      <div class="faq-item">
+        <div class="q">Comment je choisis la fenêtre à afficher ?</div>
+        <div class="a">Clic droit dans la fenêtre MacPiP : la liste des applications ouvertes apparaît, avec leurs icônes. Cliquez sur l'une d'elles et la capture démarre. Si une application a plusieurs fenêtres, elles sont regroupées dans un sous-menu.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Pourquoi macOS me demande l'autorisation d'enregistrement d'écran ?</div>
+        <div class="a">MacPiP s'appuie sur ScreenCaptureKit pour afficher le contenu d'une autre fenêtre. L'autorisation est demandée une seule fois ; si elle manque, le menu propose un raccourci vers les Réglages Système.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Et si la vidéo est en plein écran dans un autre Espace ?</div>
+        <div class="a">C'est justement le cas que MacPiP gère : les fenêtres qui ne sont pas « à l'écran » depuis l'Espace courant restent listées et capturables.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Le son passe aussi ?</div>
+        <div class="a">Non. MacPiP affiche l'image de la fenêtre ; l'audio continue de sortir de l'application source, comme d'habitude.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Comment je ferme la fenêtre sans quitter l'app ?</div>
+        <div class="a">« Fermer la fenêtre » dans le clic droit masque le lecteur, l'app reste dans la barre de menu et « Relancer » la fait revenir. Seul « Quitter » arrête MacPiP.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Quelle version de macOS faut-il ?</div>
+        <div class="a">macOS 13 Ventura ou plus récent, sur Apple Silicon comme sur Intel. L'app est sandboxée et disponible en français et en anglais.</div>
+      </div>
+    </div>
+
+    <div class="faq-list" data-lang="en">
+      <div class="faq-item">
+        <div class="q">How do I pick the window to show?</div>
+        <div class="a">Right-click inside the MacPiP window: the list of open apps appears with their icons. Click one and capture starts. If an app has several windows, they're grouped in a submenu.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Why does macOS ask for screen recording permission?</div>
+        <div class="a">MacPiP uses ScreenCaptureKit to mirror another window. The permission is asked once; if it's missing, the menu offers a shortcut straight to System Settings.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">What if the video is full screen in another Space?</div>
+        <div class="a">That's the case MacPiP is built for: windows that aren't "on screen" from the current Space are still listed and still capturable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Does audio come through?</div>
+        <div class="a">No. MacPiP mirrors the window's image; sound keeps playing from the source app as usual.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">How do I close the window without quitting?</div>
+        <div class="a">"Fermer la fenêtre" in the right-click menu hides the player, the app stays in the menu bar, and "Relancer" brings it back. Only "Quitter" terminates MacPiP.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Which macOS version do I need?</div>
+        <div class="a">macOS 13 Ventura or later, on Apple Silicon and Intel. The app is sandboxed and ships in French and English.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap contact-section" id="contact">
+  <div class="kicker">Contact</div>
+  <div data-lang="fr">
+    <h2>Une question, une idée ?</h2>
+    <p class="contact-intro">Écrivez-moi directement, je réponds personnellement à chaque message.</p>
+  </div>
+  <div data-lang="en">
+    <h2>A question, an idea?</h2>
+    <p class="contact-intro">Write to me directly, I answer every message myself.</p>
+  </div>
+
+  <form class="contact-form" id="contact-form" method="post" action="contact.php" novalidate>
+    <div class="field">
+      <label for="contact-name"><span data-lang="fr">Nom</span><span data-lang="en">Name</span></label>
+      <input class="input" id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+    </div>
+    <div class="field">
+      <label for="contact-email">Email</label>
+      <input class="input" id="contact-email" name="email" type="email" autocomplete="email" maxlength="150" required>
+    </div>
+    <div class="field field-full">
+      <label for="contact-message">Message</label>
+      <textarea class="input" id="contact-message" name="message" rows="5" maxlength="5000" required></textarea>
+    </div>
+    <p class="hp-field" aria-hidden="true">
+      <label for="contact-website">Website</label>
+      <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </p>
+    <div class="field-full contact-submit-row">
+      <button type="submit" class="btn btn-primary" id="contact-submit">
+        <span data-lang="fr">Envoyer</span>
+        <span data-lang="en">Send</span>
+      </button>
+      <span class="fineprint">
+        <span data-lang="fr">Répond directement sur david@markowicz.fr.</span>
+        <span data-lang="en">Delivered straight to david@markowicz.fr.</span>
+      </span>
+    </div>
+    <div class="field-full form-status" id="contact-status" role="status" aria-live="polite" hidden></div>
+  </form>
+</section>
+
+<section class="wrap cta-section">
+  <div class="cta-box">
+    <div>
+      <div data-lang="fr">
+        <h2>Gardez un œil sur ce qui compte.</h2>
+        <p>Téléchargez MacPiP, autorisez l'enregistrement d'écran une seule fois, et faites un clic droit.</p>
+      </div>
+      <div data-lang="en">
+        <h2>Keep an eye on what matters.</h2>
+        <p>Download MacPiP, grant screen recording once, then right-click.</p>
+      </div>
+    </div>
+    <div class="cta-action">
+      <a class="btn btn-primary" href="https://macpip.exemples.xyz">
+        <span data-lang="fr">Télécharger MacPiP 1.0</span>
+        <span data-lang="en">Download MacPiP 1.0</span>
+      </a>
+      <span class="fineprint">macOS 13 Ventura +</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <span class="credit">MacPiP · David Markowicz · <a href="https://macpip.exemples.xyz">macpip.exemples.xyz</a></span>
+    <span class="tagline">
+      <span data-lang="fr">Fait à la main pour macOS.</span>
+      <span data-lang="en">Handmade for macOS.</span>
+    </span>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span id="copyright-year"></span> - David Markowicz</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

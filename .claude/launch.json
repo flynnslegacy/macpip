@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "macpip-website",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["-S", "localhost:4173", "-t", "website"],
+      "port": 4173
+    }
+  ]
+}
