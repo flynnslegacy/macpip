@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "MacPiP",
+    name: "AnyPiP",
     platforms: [
         .macOS(.v13)
     ],
     targets: [
         .executableTarget(
-            name: "MacPiP",
+            name: "AnyPiP",
             path: "Sources/MacPiP"
         )
     ]

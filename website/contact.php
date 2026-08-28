@@ -57,18 +57,18 @@ if ($message === '' || mb_strlen($message) > $maxMessageLength) {
     respond($wantsJson, false, 'invalid_message');
 }
 
-$host = preg_replace('/[^a-zA-Z0-9.\-]/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'macpip.exemples.xyz'));
+$host = preg_replace('/[^a-zA-Z0-9.\-]/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'anypip.exemples.xyz'));
 $fromAddress = 'no-reply@' . $host;
 
-$subject = 'MacPiP - Nouveau message de ' . $name;
+$subject = 'AnyPiP - Nouveau message de ' . $name;
 
-$body = "Nouveau message depuis le formulaire de contact MacPiP.\n\n";
+$body = "Nouveau message depuis le formulaire de contact AnyPiP.\n\n";
 $body .= "Nom : {$name}\n";
 $body .= "Email : {$email}\n\n";
 $body .= "Message :\n{$message}\n";
 
 $headers = [
-    'From: MacPiP Website <' . $fromAddress . '>',
+    'From: AnyPiP Website <' . $fromAddress . '>',
     'Reply-To: ' . $name . ' <' . $email . '>',
     'Content-Type: text/plain; charset=UTF-8',
 ];

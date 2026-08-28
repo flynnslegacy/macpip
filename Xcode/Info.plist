@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>fr</string>
 	<key>CFBundleDisplayName</key>
-	<string>MacPiP</string>
+	<string>AnyPiP</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -20,19 +20,19 @@
 		<string>en</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>AnyPiP</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSApplicationCategoryType</key>
-	<string>public.app-category.utilities</string>
+	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>13.0</string>
 	<key>LSUIElement</key>
-	<true/>
+	<false/>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 </dict>

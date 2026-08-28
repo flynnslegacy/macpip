@@ -1,5 +1,5 @@
 (function () {
-  var STORAGE_KEY = "macpip-lang";
+  var STORAGE_KEY = "anypip-lang";
   var buttons = document.querySelectorAll("[data-set-lang]");
 
   function applyLang(lang) {

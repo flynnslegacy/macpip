@@ -56,6 +56,37 @@ final class PiPView: NSView {
         displayLayer.frame = bounds
     }
 
+    override func updateTrackingAreas() {
+        super.updateTrackingAreas()
+        for area in trackingAreas {
+            removeTrackingArea(area)
+        }
+        addTrackingArea(NSTrackingArea(
+            rect: bounds,
+            options: [.mouseEnteredAndExited, .activeAlways, .inVisibleRect],
+            owner: self,
+            userInfo: nil
+        ))
+    }
+
+    override func mouseEntered(with event: NSEvent) {
+        setTitleBarButtonsVisible(true)
+    }
+
+    override func mouseExited(with event: NSEvent) {
+        setTitleBarButtonsVisible(false)
+    }
+
+    private func setTitleBarButtonsVisible(_ visible: Bool) {
+        guard let window else { return }
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 0.15
+            for type: NSWindow.ButtonType in [.closeButton, .miniaturizeButton, .zoomButton] {
+                window.standardWindowButton(type)?.animator().alphaValue = visible ? 1 : 0
+            }
+        }
+    }
+
     override func rightMouseDown(with event: NSEvent) {
         let location = convert(event.locationInWindow, from: nil)
         let menu = buildCaptureMenu()
@@ -156,6 +187,15 @@ final class PiPView: NSView {
             menu.addItem(stopItem)
         }
 
+        menu.addItem(.separator())
+        let donateItem = NSMenuItem(
+            title: String(localized: "Faire un don ❤️", comment: "Right-click menu: open the donation page"),
+            action: #selector(openDonationPage),
+            keyEquivalent: ""
+        )
+        donateItem.target = self
+        menu.addItem(donateItem)
+
         return menu
     }
 
@@ -182,6 +222,12 @@ final class PiPView: NSView {
 
     @objc private func openScreenRecordingSettings() {
         if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+
+    @objc private func openDonationPage() {
+        if let url = URL(string: "https://buymeacoffee.com/davidmarkowicz") {
             NSWorkspace.shared.open(url)
         }
     }

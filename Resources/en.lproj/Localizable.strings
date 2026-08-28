@@ -1,7 +1,8 @@
 /* Status bar menu */
 "Relancer" = "Reopen";
-"À propos de MacPiP" = "About MacPiP";
+"À propos de AnyPiP" = "About AnyPiP";
 "Quitter" = "Quit";
+"Faire un don ❤️" = "Support the developer ❤️";
 
 /* Right-click menu on the PiP window */
 "Fermer la fenêtre" = "Close Window";

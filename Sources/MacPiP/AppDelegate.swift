@@ -5,15 +5,56 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var windowController: PiPWindowController?
 
     private let authorName = "David Markowicz"
-    private let websiteURLString = "https://macpip.exemples.xyz"
+    private let websiteURLString = "https://anypip.exemples.xyz"
+    private let donationURLString = "https://buymeacoffee.com/davidmarkowicz"
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        setupMainMenu()
         setupStatusItem()
         showWindow()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         false
+    }
+
+    private func setupMainMenu() {
+        let mainMenu = NSMenu()
+
+        let appMenuItem = NSMenuItem()
+        mainMenu.addItem(appMenuItem)
+
+        let appMenu = NSMenu()
+        appMenuItem.submenu = appMenu
+
+        let aboutItem = NSMenuItem(
+            title: String(localized: "À propos de AnyPiP", comment: "App menu item: show the About panel"),
+            action: #selector(showAbout),
+            keyEquivalent: ""
+        )
+        aboutItem.target = self
+        appMenu.addItem(aboutItem)
+
+        appMenu.addItem(.separator())
+
+        let donateItem = NSMenuItem(
+            title: String(localized: "Faire un don ❤️", comment: "App menu item: open the donation page"),
+            action: #selector(openDonationPage),
+            keyEquivalent: ""
+        )
+        donateItem.target = self
+        appMenu.addItem(donateItem)
+
+        appMenu.addItem(.separator())
+
+        let quitItem = NSMenuItem(
+            title: String(localized: "Quitter", comment: "Menu bar item: quit the app"),
+            action: #selector(NSApplication.terminate(_:)),
+            keyEquivalent: "q"
+        )
+        appMenu.addItem(quitItem)
+
+        NSApp.mainMenu = mainMenu
     }
 
     private func setupStatusItem() {
@@ -33,12 +74,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(.separator())
 
         let aboutItem = NSMenuItem(
-            title: String(localized: "À propos de MacPiP", comment: "Menu bar item: show the About panel"),
+            title: String(localized: "À propos de AnyPiP", comment: "Menu bar item: show the About panel"),
             action: #selector(showAbout),
             keyEquivalent: ""
         )
         aboutItem.target = self
         menu.addItem(aboutItem)
+
+        menu.addItem(.separator())
+
+        let donateItem = NSMenuItem(
+            title: String(localized: "Faire un don ❤️", comment: "Menu bar item: open the donation page"),
+            action: #selector(openDonationPage),
+            keyEquivalent: ""
+        )
+        donateItem.target = self
+        menu.addItem(donateItem)
 
         menu.addItem(.separator())
 
@@ -62,12 +113,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate(ignoringOtherApps: true)
     }
 
+    @objc private func openDonationPage() {
+        if let url = URL(string: donationURLString) {
+            NSWorkspace.shared.open(url)
+        }
+    }
+
     @objc private func showAbout() {
         let shortVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
         let buildVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1"
 
         var options: [NSApplication.AboutPanelOptionKey: Any] = [
-            .applicationName: "MacPiP",
+            .applicationName: "AnyPiP",
             .applicationVersion: shortVersion,
             .version: buildVersion,
             .credits: Self.buildCredits(author: authorName, website: websiteURLString)
@@ -84,7 +141,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private static func loadMenuBarIcon() -> NSImage? {
         guard let url = Bundle.main.url(forResource: "MenuBarIcon", withExtension: "png"),
               let image = NSImage(contentsOf: url) else {
-            return NSImage(systemSymbolName: "pip", accessibilityDescription: "MacPiP")
+            return NSImage(systemSymbolName: "pip", accessibilityDescription: "AnyPiP")
         }
         image.isTemplate = true
         image.size = NSSize(width: 18, height: 18)

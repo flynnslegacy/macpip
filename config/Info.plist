@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>MacPiP</string>
+    <string>AnyPiP</string>
     <key>CFBundleDisplayName</key>
-    <string>MacPiP</string>
+    <string>AnyPiP</string>
     <key>CFBundleIdentifier</key>
-    <string>com.david.macpip</string>
+    <string>com.macpip.app</string>
     <key>CFBundleDevelopmentRegion</key>
     <string>fr</string>
     <key>CFBundleLocalizations</key>
@@ -16,22 +16,22 @@
         <string>en</string>
     </array>
     <key>CFBundleExecutable</key>
-    <string>MacPiP</string>
+    <string>AnyPiP</string>
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
+    <string>1.1</string>
     <key>CFBundleVersion</key>
-    <string>1</string>
+    <string>2</string>
     <key>LSMinimumSystemVersion</key>
     <string>13.0</string>
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>LSApplicationCategoryType</key>
-    <string>public.app-category.utilities</string>
+    <string>public.app-category.video</string>
     <key>LSUIElement</key>
-    <true/>
+    <false/>
 </dict>
 </plist>

@@ -2,21 +2,21 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-APP_NAME="MacPiP"
+APP_NAME="AnyPiP"
 BUILD_CONFIG="release"
 
 cd "$ROOT_DIR"
 echo "Compilation de $APP_NAME ($BUILD_CONFIG)…"
 swift build -c "$BUILD_CONFIG"
 
-BIN_PATH="$(swift build -c "$BUILD_CONFIG" --show-bin-path)/MacPiP"
+BIN_PATH="$(swift build -c "$BUILD_CONFIG" --show-bin-path)/AnyPiP"
 APP_BUNDLE="$ROOT_DIR/build/$APP_NAME.app"
 
 rm -rf "$APP_BUNDLE"
 mkdir -p "$APP_BUNDLE/Contents/MacOS"
 mkdir -p "$APP_BUNDLE/Contents/Resources"
 
-cp "$BIN_PATH" "$APP_BUNDLE/Contents/MacOS/MacPiP"
+cp "$BIN_PATH" "$APP_BUNDLE/Contents/MacOS/AnyPiP"
 cp "$ROOT_DIR/config/Info.plist" "$APP_BUNDLE/Contents/Info.plist"
 cp "$ROOT_DIR/Resources/MenuBarIcon.png" "$APP_BUNDLE/Contents/Resources/MenuBarIcon.png"
 cp "$ROOT_DIR/Resources/AppIcon.icns" "$APP_BUNDLE/Contents/Resources/AppIcon.icns"

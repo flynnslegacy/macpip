@@ -171,17 +171,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Xcode/MacPiP.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GF9ZH4NVU5;
 				INFOPLIST_FILE = Xcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnyPip;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.david.macpip;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpip.app;
 				PRODUCT_NAME = MacPiP;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -256,17 +260,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Xcode/MacPiP.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GF9ZH4NVU5;
 				INFOPLIST_FILE = Xcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnyPip;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.david.macpip;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macpip.app;
 				PRODUCT_NAME = MacPiP;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
